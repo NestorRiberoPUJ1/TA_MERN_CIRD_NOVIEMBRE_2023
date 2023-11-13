@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.chatContainer {
+    height: 48px;
+    padding: 0px 8px;
+    margin: 8px 0px;
+}
+
+.chatContainer>.chatImgContainer {
+    height: 48px;
+    width: 48px;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+.chatContainer>.chatImgContainer>img {
+    height: 100%;
+    width: 100%;
+}
+
+.chatContainer>.chatContentContainer {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+}
+
+.chatContainer>.chatContentContainer>h1 {
+    font-size: medium;
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
+
+.chatContainer>.chatContentContainer>p {
+    font-size: small;
+    overflow: hidden;
+    height: 16px;
+    width: 120px;
+    color: rgb(112, 112, 112);
+    font-weight: 400;
+    display: inline-block;
+}
+
+.chatContainer>.chatContentContainer>img {
+    display: inline-block;
+    vertical-align: top;
+    height: 24px;
+}
+
+.chatContainer>.chatTimestamp {
+    display: inline-block;
+    vertical-align: top;
+    font-size: small;
+    color: rgb(112, 112, 112);
+    margin-top: 4px;
+}
