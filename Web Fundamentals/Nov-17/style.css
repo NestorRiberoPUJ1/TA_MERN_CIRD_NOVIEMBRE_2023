@@ -1,0 +1,95 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainContainer {
+    width: 920px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: rgb(52, 52, 52);
+    border-top: 8px solid rgb(163, 0, 209);
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    column-gap: 24px;
+}
+
+nav>h1 {
+    color: white;
+    font-size: xx-large;
+}
+
+nav>input {
+    height: 24px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+button {
+    background-color: rgb(163, 0, 209);
+    color: white;
+    height: 24px;
+    padding: 0px 8px;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0);
+    border: none;
+    box-sizing: border-box;
+
+}
+
+.mainContent {
+    margin-top: 16px;
+    display: flex;
+    column-gap: 24px;
+}
+
+.sectionContent {
+    flex: 7
+}
+
+.sideContent {
+    flex: 4
+}
+
+.videoPlayer {
+    width: 100%;
+}
+
+.videoInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userInfo>img {
+    height: 36px;
+    margin-right: 12px;
+}
+
+.userInfo>h3 {
+    color: rgb(163, 0, 209);
+}
+
+.videoCard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin: 16px 0px;
+}
+
+.videoCard>video {
+    margin-right: 12px;
+    height: 100%;
+}

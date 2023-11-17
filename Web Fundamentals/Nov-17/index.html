@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <nav>
+            <h1>VideoLab</h1>
+            <input type="text" name="" id="" placeholder="Search">
+            <button type="button">Login</button>
+        </nav>
+        <main class="mainContent">
+            <section class="sectionContent">
+                <video onmouseover="playVideo(this)"
+                onmouseout="pause(this)"
+                src="./assets/video.mp4" class="videoPlayer" controls></video>
+                <div class="videoInfo">
+                    <div>
+                        <h2>Example Video Title</h2>
+                        <p>1.3k Views | June 18, 2021</p>
+                    </div>
+                    <button type="button">Subscribe</button>
+                </div>
+                <div class="userInfo">
+                    <img src="./assets/user.png" alt="user">
+                    <h3>Example user Name</h3>
+                </div>
+
+
+            </section>
+            <aside class="sideContent">
+                <h2>Up Next</h2>
+                <hr>
+                <div class="videoCard">
+                    <video src="./assets/video.mp4" onmouseover="playVideo(this)" onmouseout="resetVideo(this)"></video>
+                    <h3>Test Video Title</h3>
+                </div>
+                <div class="videoCard">
+                    <video src="./assets/video.mp4"onmouseover="playVideo(this)" onmouseout="resetVideo(this)"></video>
+                    <h3>Test Video Title</h3>
+                </div>
+                <div class="videoCard">
+                    <video src="./assets/video.mp4"onmouseover="playVideo(this)" onmouseout="resetVideo(this)"></video>
+                    <h3>Test Video Title</h3>
+                </div>
+                <div class="videoCard">
+                    <video src="./assets/video.mp4"onmouseover="playVideo(this)" onmouseout="resetVideo(this)"></video>
+                    <h3>Test Video Title</h3>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
