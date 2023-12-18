@@ -1,0 +1,11 @@
+
+
+.main{
+    background-color: red;
+    width: 750px;
+    height: 500px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    box-sizing: border-box;
+}
