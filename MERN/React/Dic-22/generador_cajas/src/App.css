@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.Container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  row-gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 32px;
+}
+
+body{
+  padding: 48px;
+}
