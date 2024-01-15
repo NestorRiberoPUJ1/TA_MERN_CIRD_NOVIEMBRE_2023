@@ -4,7 +4,16 @@ const Broma = require("../models/broma.model");
 
 module.exports.getBromas = async (req, res) => {
     try {
-        const Bromas = await Broma.find();
+        const random = Boolean(req.query?.random);
+        const limit = Number(req.query?.limit);
+        const Bromas = await Broma.find().limit(limit);
+        if (random) {
+            const randValue = Math.round(Math.random() * (Bromas.length - 1));
+            const randBroma = Bromas[randValue];
+            res.status(200);
+            res.json(randBroma);
+            return;
+        }
         res.status(200);
         res.json(Bromas);
     } catch (error) {
