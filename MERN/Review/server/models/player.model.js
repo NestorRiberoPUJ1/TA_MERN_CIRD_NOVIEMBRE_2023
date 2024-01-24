@@ -14,6 +14,7 @@ const PlayerSchema = new mongoose.Schema({
         type: String,
         required: false,
         enum: ["Forward", "Midfielder", "Defense", "Goalkeeper"],
+
     },
     status: {
         type: [String],

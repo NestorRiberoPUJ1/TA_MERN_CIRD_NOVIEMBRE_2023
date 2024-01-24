@@ -1,5 +1,6 @@
 'use client'
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const { Typography, TextField, Stack, Box, Button } = require("@mui/material")
@@ -10,18 +11,21 @@ const CreatePlayerForm = () => {
     const [name, setName] = useState("");
     const [position, setPosition] = useState("");
 
+    const router = useRouter();
+
     const handleCreatePlayer = async (e) => {
         e.preventDefault();
         try {
             const data = {
                 name,
-                position
+                position: position.length > 0 ? position : null
             }
             const response = await axios.post("http://localhost:8000/api/player", data);
             const result = await response.data;
             console.log(result);
             setName("");
             setPosition("");
+            router.push("/players/list")
         } catch (error) {
             console.log(error);
         }
@@ -39,8 +43,8 @@ const CreatePlayerForm = () => {
                             fullWidth
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            helperText={name.length < 2 ? "Name must be at least 2 characters in length" : ""}
-                            error={name.length < 2}
+                            helperText={name.length < 2 && name.length > 0 ? "Name must be at least 2 characters in length" : ""}
+                            error={name.length < 2 && name.length > 0}
                         />
                     </Stack>
                     <Stack direction="row" spacing={2}>
